@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas Ćwiczeń - Siła i Zdrowie</title>
+    <style>
+      :root {
+        --zinc-50: #fafafa;
+        --zinc-100: #f4f4f5;
+        --zinc-200: #e4e4e7;
+        --zinc-300: #d4d4d8;
+        --zinc-500: #71717a;
+        --zinc-700: #3f3f46;
+        --zinc-800: #27272a;
+        --zinc-900: #18181b;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: var(--zinc-50);
+        color: var(--zinc-800);
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: white;
+        border-bottom: 1px solid var(--zinc-200);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .logo {
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: var(--zinc-900);
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--zinc-500);
+        font-weight: 500;
+        transition: color 0.2s ease;
+        cursor: pointer;
+      }
+
+      nav a:hover {
+        color: var(--zinc-900);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      section {
+        margin-bottom: 4rem;
+        scroll-margin-top: 80px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--zinc-900);
+        border-bottom: 2px solid var(--zinc-200);
+        padding-bottom: 0.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: var(--zinc-700);
+      }
+
+      .grid-atlas {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .card {
+        background: white;
+        border: 1px solid var(--zinc-200);
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: all 0.2s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        border-color: var(--zinc-400);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .tag {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--zinc-500);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        color: var(--zinc-800);
+        transition: color 0.2s;
+      }
+
+      .card:hover h3 {
+        color: var(--zinc-900);
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        color: var(--zinc-500);
+        flex-grow: 1;
+      }
+
+      .info-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        border: 1px solid var(--zinc-200);
+      }
+
+      .info-box h3 {
+        color: var(--zinc-900);
+        margin-bottom: 1rem;
+      }
+
+      .highlight {
+        font-weight: 600;
+        color: var(--zinc-900);
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        border-top: 1px solid var(--zinc-200);
+        color: var(--zinc-500);
+        font-size: 0.9rem;
+        margin-top: 4rem;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          gap: 1rem;
+          font-size: 0.9rem;
+        }
+        .info-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">GymAtlas</div>
+      <nav>
+        <ul>
+          <li><a onclick="history.back()">Powrót</a></li>
+          <li><a href="#atlas">Ćwiczenia</a></li>
+          <li><a href="#dieta">Dieta</a></li>
+          <li><a href="#sen">Regeneracja</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="atlas">
+        <h2>Atlas Ćwiczeń</h2>
+        <p>
+          Poniżej znajdziesz zbiór najważniejszych ćwiczeń podzielonych na
+          partie mięśniowe.
+        </p>
+
+        <div class="grid-atlas">
+          <div class="card">
+            <span class="tag">Klatka piersiowa</span>
+            <h3>Wyciskanie sztangi</h3>
+            <p>
+              Podstawowe ćwiczenie wielostawowe budujące masę i siłę całej
+              klatki.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Klatka piersiowa</span>
+            <h3>Wyciskanie hantli skos</h3>
+            <p>
+              Skupia się na górnej części mięśnia piersiowego, poprawiając
+              estetykę.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Klatka piersiowa</span>
+            <h3>Rozpiętki</h3>
+            <p>
+              Ćwiczenie izolowane, świetne do rozciągnięcia mięśni piersiowych.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Klatka piersiowa</span>
+            <h3>Pompki (Push-ups)</h3>
+            <p>Kalisteniczne ćwiczenie angażujące klatkę, barki i triceps.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Plecy</span>
+            <h3>Martwy ciąg</h3>
+            <p>
+              Król ćwiczeń. Angażuje cały tylny łańcuch, budując potężną siłę.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Plecy</span>
+            <h3>Podciąganie na drążku</h3>
+            <p>
+              Najlepsze ćwiczenie na szerokość pleców. Angażuje najszerszy
+              grzbietu.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Plecy</span>
+            <h3>Wiosłowanie sztangą</h3>
+            <p>
+              Buduje grubość pleców, angażując mięśnie czworoboczne i
+              równoległoboczne.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Plecy</span>
+            <h3>Ściąganie drążka</h3>
+            <p>
+              Alternatywa dla podciągania, pozwala kontrolować napięcie mięśni.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Nogi</span>
+            <h3>Przysiady ze sztangą</h3>
+            <p>
+              Fundament treningu nóg. Angażuje czworogłowe, dwugłowe i pośladki.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Nogi</span>
+            <h3>Wykroki (Lunges)</h3>
+            <p>
+              Świetne ćwiczenie na stabilizację, pośladki i mięśnie czworogłowe.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Nogi</span>
+            <h3>Suwnica (Leg Press)</h3>
+            <p>Pozwala na użycie dużego ciężaru przy odciążeniu kręgosłupa.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Nogi</span>
+            <h3>Martwy ciąg na prostych</h3>
+            <p>Skupia się mocno na tylnej taśmie ud (mięśnie dwugłowe).</p>
+          </div>
+          <div class="card">
+            <span class="tag">Nogi</span>
+            <h3>Wspięcia na palce</h3>
+            <p>Izolowane ćwiczenie na rozwój mięśni łydki.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Barki</span>
+            <h3>OHP (Żołnierskie)</h3>
+            <p>
+              Wyciskanie sztangi nad głowę. Buduje siłę i wielkość całych
+              barków.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Barki</span>
+            <h3>Wznosy bokiem</h3>
+            <p>Kluczowe dla budowania bocznego aktonu barku (szerokość).</p>
+          </div>
+          <div class="card">
+            <span class="tag">Barki</span>
+            <h3>Face Pull</h3>
+            <p>Ćwiczenie prehabilitacyjne na tył barku i rotatory.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Biceps</span>
+            <h3>Uginanie ze sztangą</h3>
+            <p>
+              Klasyczne ćwiczenie budujące masę mięśnia dwugłowego ramienia.
+            </p>
+          </div>
+          <div class="card">
+            <span class="tag">Biceps</span>
+            <h3>Uginanie młotkowe</h3>
+            <p>Angażuje biceps oraz mięsień ramienny, dodając ręce grubości.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Triceps</span>
+            <h3>Wyciskanie francuskie</h3>
+            <p>Izoluje triceps, pozwalając na mocne rozciągnięcie mięśnia.</p>
+          </div>
+          <div class="card">
+            <span class="tag">Triceps</span>
+            <h3>Dipy (Pompki na poręczach)</h3>
+            <p>Angażuje triceps i dół klatki piersiowej.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Brzuch</span>
+            <h3>Plank (Deska)</h3>
+            <p>Ćwiczenie izometryczne wzmacniające mięśnie głębokie (core).</p>
+          </div>
+          <div class="card">
+            <span class="tag">Brzuch</span>
+            <h3>Allachy</h3>
+            <p>
+              Skłony tułowia z linką wyciągu klęcząc. Mocno angażuje prosty
+              brzucha.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="dieta">
+        <h2>Dieta i Odżywianie</h2>
+        <div class="info-section">
+          <div class="info-box">
+            <h3>Makroskładniki</h3>
+            <p>
+              <span class="highlight">Białko:</span> Budulec mięśni. Celuj w
+              1.6g - 2.0g na kilogram masy ciała.
+            </p>
+            <p>
+              <span class="highlight">Węglowodany:</span> Główne źródło energii
+              do ciężkich treningów.
+            </p>
+            <p>
+              <span class="highlight">Tłuszcze:</span> Niezbędne dla gospodarki
+              hormonalnej (testosteron).
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Nadwyżka vs Deficyt</h3>
+            <p>
+              Aby budować mięśnie, potrzebujesz zazwyczaj lekkiej nadwyżki
+              kalorycznej (200-300 kcal). Aby spalać tłuszcz, musisz być w
+              deficycie kalorycznym.
+            </p>
+            <p>
+              Pamiętaj o nawodnieniu – woda jest kluczowa dla transportu
+              składników odżywczych.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="sen">
+        <h2>Sen i Regeneracja</h2>
+        <div class="info-section">
+          <div class="info-box">
+            <h3>Dlaczego sen jest ważny?</h3>
+            <p>
+              Mięśnie nie rosną na siłowni, lecz podczas odpoczynku. To w
+              trakcie snu uwalniany jest hormon wzrostu, a mikrouszkoczenia
+              włókien mięśniowych są naprawiane.
+            </p>
+          </div>
+          <div class="info-box">
+            <h3>Zasady dobrego snu</h3>
+            <ul>
+              <li>
+                Celuj w <span class="highlight">7-9 godzin</span> snu na dobę.
+              </li>
+              <li>Unikaj niebieskiego światła (telefon) godzinę przed snem.</li>
+              <li>Utrzymuj niską temperaturę w sypialni.</li>
+              <li>
+                Stałe pory kładzenia się i wstawania poprawiają jakość
+                regeneracji.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 Atlas Ćwiczeń. Wszystkie prawa zastrzeżone | Mateusz Ropek
+        77797
+      </p>
+    </footer>
+  </body>
+</html>
