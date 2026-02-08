@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Świat Szachów</title>
+    <style>
+    body {
+        font-family: "Times New Roman", Times, serif;
+        line-height: 1.4;
+        padding: 10px;
+        background-color: #f0f0f0;
+        color: #000;
+    }
+    header {
+        text-align: center;
+        border-bottom: 5px solid #000080;
+        margin-bottom: 20px;
+    }
+    .szachy {
+        background: transparent;
+        border: none;
+        border-left: 5px solid #000080;
+        padding: 0 0 0 15px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    .szachy img {
+        width: 300px;
+        border: 1px solid #333;
+    }
+    h2 { 
+        color: #ABAB1B;
+        text-decoration: underline;
+    }
+    footer { 
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>♟️ Świat Szachów</h1>
+        <p>Przegląd najważniejszych figur i elementów królewskiej gry</p>
+    </header>
+
+    <div class="szachy">
+        <img src="img/szachy/hetman.jpg" alt="Hetman">
+        <h2>Hetman</h2>
+        <p>Najpotężniejsza figura na szachownicy. Łączy możliwości gońca i wieży, 
+        poruszając się w dowolnym kierunku o dowolną liczbę pól. 
+        To kluczowy element strategii ofensywnej.</p>
+    </div>
+
+    <div class="szachy">
+        <img src="img/szachy/skoczek.jpg" alt="Skoczek">
+        <h2>Skoczek</h2>
+        <p>Jedyna figura, która potrafi przeskakiwać inne. 
+        Porusza się po charakterystycznym kształcie litery „L”. 
+        Niezastąpiony w taktycznych kombinacjach i zaskakujących atakach.</p>
+    </div>
+
+    <div class="szachy">
+        <img src="img/szachy/goniec.jpg" alt="Goniec">
+        <h2>Goniec</h2>
+        <p>Porusza się po przekątnych, zawsze pozostając na polach jednego koloru. 
+        W duecie z drugim gońcem tworzy silną parę, kontrolującą duże obszary szachownicy.</p>
+    </div>
+    
+    <div class="szachy">
+        <img src="img/szachy/wieza.jpg" alt="Wieża">
+        <h2>Wieża</h2>
+        <p>Silna figura liniowa, poruszająca się pionowo lub poziomo. 
+        Szczególnie groźna w końcówkach, gdzie jej mobilność pozwala dominować nad przeciwnikiem.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dawid Olejnik 78118 IiE/23/2/N</p>
+    </footer>
+
+</body>
+</html>
